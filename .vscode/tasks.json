@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile & Run",
+            "type": "shell",
+            "command": "/bin/zsh",
+            "args": [
+                "-c",
+                "/opt/homebrew/bin/g++-16 -std=c++17 \"${file}\" -o \"${fileBasenameNoExtension}\" && ./\"${fileBasenameNoExtension}\" < input.txt > output.txt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
